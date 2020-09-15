@@ -11,8 +11,6 @@
 using namespace std;
 class User {
 public:
-    User() = default;
-    explicit User(list<BuyList*> l) : lists(l){};
 
     void addList(BuyList* B);
 

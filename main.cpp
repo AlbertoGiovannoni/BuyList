@@ -14,11 +14,11 @@ int main() {
     BuyList myListA;
     BuyList myListB;
 
-    myListA.add(prod1);
-    myListA.add(prod2);
+    myListA.add(&prod1);
+    myListA.add(&prod2);
 
-    myListB.add(prod3);
-    myListB.add(prod3);
+    myListB.add(&prod3);
+    myListB.add(&prod3);
 
 
     person.addList(&myListA);
@@ -28,7 +28,7 @@ int main() {
 
 
 
-    myListA.modify("pomodori", "frutta", 4,false);
+    myListA.modify("pomodori", "frutta", 6,false);
     person.printTotal(&myListA);
 
 }

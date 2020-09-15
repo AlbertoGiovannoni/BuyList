@@ -5,9 +5,6 @@ using namespace std;
 int main() {
     User person;
 
-    map<string, Product*> list1;
-    map<string, Product*> list2;
-
     Product prod1("banane", "frutta", 7);
     Product prod2("pomodori", "verdura", 3);
 
@@ -15,23 +12,23 @@ int main() {
     Product prod4("insalata", "vardura", 2);
 
 
-    BuyList myList1;
-    BuyList myList2;
+    BuyList myListA;
+    BuyList myListB;
 
-    myList1.add(prod1);
-    myList1.add(prod2);
+    myListA.add(prod1);
+    myListA.add(prod2);
 
-    myList2.add(prod3);
-    myList2.add(prod3);
-
-
-    person.addList(&myList1);
-    person.addList(&myList2);
-
-    person.printTotal(&myList1);
+    myListB.add(prod3);
+    myListB.add(prod3);
 
 
-    myList1.modify("pomodori", "frutta", 4,false);
-    person.printTotal(&myList1);
+    person.addList(&myListA);
+    person.addList(&myListB);
+
+    person.printTotal(&myListA);
+
+
+    myListA.modify("pomodori", "frutta", 4,false);
+    person.printTotal(&myListA);
 
 }

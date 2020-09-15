@@ -33,9 +33,15 @@ void BuyList::remove(string& n) {
 void BuyList::modify(string &pr, string ty, int q, bool a) {
     auto it = list.find(pr);
     if (it != list.end()) {
+        if(a){
+            total -= it->second->getQty();
+            total += q;
+        }
         it->second->setType(ty);
         it->second->setQty(q);
         it->second->setAcquired(a);
     }
 }
+
+
 

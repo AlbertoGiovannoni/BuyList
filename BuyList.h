@@ -10,18 +10,25 @@
 #include <map>
 using namespace std;
 class BuyList {
+
 public:
-    BuyList() = default;
-    explicit BuyList(map<string, Product*> L) : list(L) {};
+    BuyList() : total(0){};
+    explicit BuyList(map<string, Product*> L) : list(L), total(0){};
     void add(Product& P);
     void remove(string& n);
     void modify (string& pr, string ty, int n, bool a);
 
+    int getTotal() const {
+        return total;
+    }
 
+    const map<string, Product *> &getList() const {
+        return list;
+    }
 
 private:
     map<string, Product*> list;
-    int total = 0;
+    int total;
 };
 
 

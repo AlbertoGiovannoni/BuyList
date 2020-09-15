@@ -25,9 +25,6 @@ public:
         return type;
     }
 
-    void setName(const string &name) {
-        Product::name = name;
-    }
 
     void setType(const string &type) {
         Product::type = type;

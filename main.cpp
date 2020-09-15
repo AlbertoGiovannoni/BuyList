@@ -7,7 +7,6 @@ int main() {
 
     Product prod1("banane", "frutta", 7);
     Product prod2("pomodori", "verdura", 3);
-
     Product prod3("pollo", "carne", 5);
     Product prod4("insalata", "vardura", 2);
 
